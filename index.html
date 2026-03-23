@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Agents · Google Antigravity</title>
+  <meta name="description"
+    content="Guía interactiva y completa sobre cómo crear y usar Skill Agents en Google Antigravity con ejemplos reales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">✦</span>
+        <span>Antigravity</span>
+        <span class="logo-badge">Skills</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#que-son">¿Qué son?</a></li>
+        <li><a href="#diferencias">Workflows vs Skills</a></li>
+        <li><a href="#anatomia">Anatomía</a></li>
+        <li><a href="#ejemplos">Ejemplos</a></li>
+        <li><a href="#multi-ai">Multi-AI</a></li>
+      </ul>
+      <a href="#ejemplos" class="nav-cta">Empezar →</a>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-pill fade-in">
+        <span class="pill-dot"></span>
+        Antigravity IDE
+      </div>
+      <h1 class="hero-title fade-in delay-1">
+        Domina los<br />
+        <span class="gradient-text">Skill Agents</span>
+      </h1>
+      <p class="hero-subtitle fade-in delay-2">
+        Enseña a tu IA cómo pensar, actuar y evolucionar.<br />
+        Los Skill Agents de Google Antigravity son capacidades vivas que transforman cada proyecto.
+      </p>
+      <div class="hero-actions fade-in delay-3">
+        <a href="#que-son" class="btn-primary">Explorar Guía</a>
+        <a href="#ejemplos" class="btn-ghost">Ver Ejemplos →</a>
+      </div>
+    </div>
+    <div class="hero-code-preview fade-in-right">
+      <div class="code-window">
+        <div class="code-titlebar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">SKILL.md</span>
+        </div>
+        <pre class="code-body"><code><span class="c-comment">---</span>
+<span class="c-key">name</span><span class="c-colon">:</span> <span class="c-string">multi-ai</span>
+<span class="c-key">description</span><span class="c-colon">:</span> <span class="c-string">Adopta automáticamente el</span>
+  <span class="c-string">perfil cognitivo óptimo para</span>
+  <span class="c-string">cada fase del proyecto.</span>
+<span class="c-comment">---</span>
+
+<span class="c-key"># Multi-AI Pipeline Skill</span>
+
+<span class="c-comment">## Perfiles Cognitivos</span>
+<span class="c-value">🏛️ Arquitecto → Planificación</span>
+<span class="c-value">💻 Sr. Developer → Implementación</span>
+<span class="c-value">🔍 Auditor QA → Verificación</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== QUÉ SON ====== -->
+  <section class="section" id="que-son">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Fundamentos</span>
+        <h2>¿Qué son los Skill Agents?</h2>
+        <p>Los Skills son comportamientos inteligentes que le inyectas permanentemente a tu Agente Antigravity. No son
+          recetas de pasos, sino un nuevo modo de pensar y actuar ante un tipo de problema.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="glass-card reveal">
+          <div class="card-icon">🧠</div>
+          <h3>Comportamiento Cognitivo</h3>
+          <p>Un Skill altera <strong>cómo razona</strong> el agente. Le enseña qué herramientas usar, qué rol adoptar y
+            bajo qué condiciones activarse.</p>
+        </div>
+        <div class="glass-card reveal delay-1">
+          <div class="card-icon">⚡</div>
+          <h3>Activación Automática</h3>
+          <p>El agente <strong>detecta orgánicamente</strong> cuándo aplicar cada skill según la naturaleza de la
+            petición, sin que el usuario tenga que recordarlo.</p>
+        </div>
+        <div class="glass-card reveal delay-2">
+          <div class="card-icon">🔧</div>
+          <h3>Personalizables</h3>
+          <p>Puedes crear Skills a medida para tu stack: un experto en React, un auditor de seguridad, un arquitecto de
+            microservicios...</p>
+        </div>
+        <div class="glass-card reveal delay-3">
+          <div class="card-icon">📂</div>
+          <h3>Siempre Disponibles</h3>
+          <p>Al guardar la skill en <code>.agents/skills/[nombre]/SKILL.md</code>, quedan activas para toda la vida del
+            proyecto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DIFERENCIAS ====== -->
+  <section class="section section-alt" id="diferencias">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Conceptos Clave</span>
+        <h2>Workflows vs Skills</h2>
+        <p>Dos herramientas complementarias. Úsalas juntas para construir pipelines sofisticados de trabajo.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card workflow reveal">
+          <div class="compare-badge">📋 Workflow</div>
+          <h3>Receta Procedural</h3>
+          <ul>
+            <li>✦ Pasos lineales y predefinidos</li>
+            <li>✦ Se activa con un slash command (ej. <code>/deploy</code>)</li>
+            <li>✦ Ideal para tareas repetitivas estandarizadas</li>
+            <li>✦ El "botón de encendido" de un proceso</li>
+            <li>✦ Vive en <code>.agents/workflows/</code></li>
+          </ul>
+          <div class="compare-example">
+            <span class="eg-label">Ejemplo de uso:</span>
+            <span class="eg-text">/setup-db, /run-tests, /deploy-prod</span>
+          </div>
+        </div>
+        <div class="compare-divider reveal">
+          <div class="divider-circle">+</div>
+        </div>
+        <div class="compare-card skill reveal">
+          <div class="compare-badge">✦ Skill Agent</div>
+          <h3>Talento Cognitivo</h3>
+          <ul>
+            <li>✦ Define cómo pensar ante un problema</li>
+            <li>✦ Se activa orgánicamente o bajo petición</li>
+            <li>✦ Ideal para comportamientos complejos y de alta especialización</li>
+            <li>✦ El "cerebro" detrás de un proceso</li>
+            <li>✦ Vive en <code>.agents/skills/[nombre]/SKILL.md</code></li>
+          </ul>
+          <div class="compare-example">
+            <span class="eg-label">Ejemplo de uso:</span>
+            <span class="eg-text">react-expert, security-auditor, multi-ai</span>
+          </div>
+        </div>
+      </div>
+      <div class="synergy-box reveal">
+        <div class="synergy-icon">🔗</div>
+        <div>
+          <h4>Trabajan Juntos</h4>
+          <p>Un <strong>Workflow</strong> puede invocar una <strong>Skill</strong>. El Workflow define <em>cuándo</em> y
+            <em>qué</em> hacer; la Skill define <em>cómo</em> hacerlo con excelencia. Esto crea pipelines de IA de nivel
+            profesional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ANATOMÍA ====== -->
+  <section class="section" id="anatomia">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Estructura</span>
+        <h2>Anatomía de una Skill</h2>
+        <p>Una Skill es una carpeta dentro de <code>.agents/skills/</code> que contiene al menos el archivo
+          <code>SKILL.md</code>. Este archivo tiene dos partes obligatorias.</p>
+      </div>
+      <div class="anatomy-layout">
+        <div class="file-tree reveal">
+          <div class="tree-title">📁 Estructura de Archivos</div>
+          <div class="tree-body">
+            <div class="tree-item root">.agents/</div>
+            <div class="tree-item level-1">skills/</div>
+            <div class="tree-item level-2 active">mi-skill/</div>
+            <div class="tree-item level-3 highlight">SKILL.md ← obligatorio</div>
+            <div class="tree-item level-3">scripts/ ← opcional</div>
+            <div class="tree-item level-3">examples/ ← opcional</div>
+            <div class="tree-item level-2">otra-skill/</div>
+            <div class="tree-item level-1">workflows/</div>
+            <div class="tree-item level-2">mi-workflow.md</div>
+          </div>
+        </div>
+        <div class="anatomy-parts reveal delay-1">
+          <div class="anatomy-part">
+            <div class="part-num">01</div>
+            <div>
+              <h4>YAML Frontmatter</h4>
+              <p>Metadatos de la skill: nombre, descripción y las herramientas que tiene permitido usar. El campo
+                <code>description</code> es crítico — es lo que le permite al agente decidir cuándo activar esta skill
+                de forma automática.</p>
+            </div>
+          </div>
+          <div class="anatomy-part">
+            <div class="part-num">02</div>
+            <div>
+              <h4>Instrucciones en Markdown</h4>
+              <p>El cuerpo del documento, escrito en Markdown natural. Aquí defines el comportamiento paso a paso, los
+                roles que debe adoptar el agente, las herramientas que debe priorizar y las reglas que nunca debe
+                romper.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EJEMPLOS ====== -->
+  <section class="section section-alt" id="ejemplos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Código Real</span>
+        <h2>Ejemplos Prácticos</h2>
+        <p>Templates listos para copiar, pegar y adaptar en tu proyecto.</p>
+      </div>
+      <div class="tabs-container reveal">
+        <div class="tabs-header" id="tabs-header">
+          <button class="tab-btn active" data-tab="basic" id="tab-basic">Skill Básica</button>
+          <button class="tab-btn" data-tab="advanced" id="tab-advanced">Skill Avanzada</button>
+          <button class="tab-btn" data-tab="workflow" id="tab-workflow">Workflow Integrado</button>
+        </div>
+        <div class="tabs-body">
+          <!-- TAB 1: BASIC -->
+          <div class="tab-panel active" id="panel-basic">
+            <div class="tab-meta">
+              <span class="tab-file">📄 .agents/skills/react-expert/SKILL.md</span>
+              <button class="copy-btn" data-target="code-basic" id="copy-basic">Copiar</button>
+            </div>
+            <pre class="code-block" id="code-basic"><code><span class="c-comment">---</span>
+<span class="c-key">name</span><span class="c-colon">:</span> <span class="c-string">react-expert</span>
+<span class="c-key">description</span><span class="c-colon">:</span> <span class="c-string">Actívame cuando el usuario trabaje</span>
+  <span class="c-string">con componentes React, hooks, routing</span>
+  <span class="c-string">o gestión de estado con Zustand/Redux.</span>
+<span class="c-comment">---</span>
+
+<span class="c-key"># React Expert Skill</span>
+
+<span class="c-comment">## Comportamiento al Activarse</span>
+
+<span class="c-value">Cuando esta skill se activa, adoptas el rol de un</span>
+<span class="c-value">Senior Frontend Engineer especializado en React.</span>
+
+<span class="c-comment">## Reglas de Código</span>
+
+<span class="c-value">- Siempre usa componentes funcionales con hooks</span>
+<span class="c-value">- Usa `useCallback` y `useMemo` para optimizar renders</span>
+<span class="c-value">- Prefiere Zustand sobre Redux para estado global</span>
+<span class="c-value">- Aplica lazy loading en rutas con `React.lazy()`</span>
+
+<span class="c-comment">## Revisión Automática</span>
+
+<span class="c-value">Antes de entregar código, siempre valida:</span>
+<span class="c-value">1. ¿Hay prop drilling? → Refactorizar con Context</span>
+<span class="c-value">2. ¿Los efectos tienen cleanup? → Agregar return</span>
+<span class="c-value">3. ¿Las listas tienen key única? → Validar `key` prop</span></code></pre>
+          </div>
+          <!-- TAB 2: ADVANCED -->
+          <div class="tab-panel" id="panel-advanced">
+            <div class="tab-meta">
+              <span class="tab-file">📄 .agents/skills/security-auditor/SKILL.md</span>
+              <button class="copy-btn" data-target="code-advanced" id="copy-advanced">Copiar</button>
+            </div>
+            <pre class="code-block" id="code-advanced"><code><span class="c-comment">---</span>
+<span class="c-key">name</span><span class="c-colon">:</span> <span class="c-string">security-auditor</span>
+<span class="c-key">description</span><span class="c-colon">:</span> <span class="c-string">Actívame cuando el usuario pida</span>
+  <span class="c-string">revisar código en busca de vulnerabilidades,</span>
+  <span class="c-string">auditorías de seguridad o hardening.</span>
+<span class="c-comment">---</span>
+
+<span class="c-key"># Security Auditor Skill</span>
+
+<span class="c-comment">## Tu Rol</span>
+<span class="c-value">Eres un Penetration Tester y Auditor de Seguridad</span>
+<span class="c-value">OWASP. Tu trabajo es ENCONTRAR problemas.</span>
+
+<span class="c-comment">## Checklist Obligatorio (OWASP Top 10)</span>
+<span class="c-value">1. Inyección SQL / NoSQL</span>
+<span class="c-value">2. Broken Authentication</span>
+<span class="c-value">3. XSS (Cross-Site Scripting)</span>
+<span class="c-value">4. Secretos expuestos en código</span>
+<span class="c-value">5. Dependencias con CVEs conocidos</span>
+
+<span class="c-comment">## Proceso de Revisión</span>
+
+<span class="c-key">### Paso 1:</span> <span class="c-value">Escanea el código con `grep_search`</span>
+<span class="c-value">buscando patrones de riesgo (eval, exec, innerHTML)</span>
+
+<span class="c-key">### Paso 2:</span> <span class="c-value">Revisa dependencias usando `run_command`</span>
+<span class="c-value">→ `npm audit` / `pip audit`</span>
+
+<span class="c-key">### Paso 3:</span> <span class="c-value">Genera reporte en artefacto con:</span>
+<span class="c-value">  - Nivel de severidad por hallazgo (CRITICAL/HIGH/MED)</span>
+<span class="c-value">  - Línea de código exacta afectada</span>
+<span class="c-value">  - Remediación sugerida</span></code></pre>
+          </div>
+          <!-- TAB 3: WORKFLOW -->
+          <div class="tab-panel" id="panel-workflow">
+            <div class="tab-meta">
+              <span class="tab-file">📄 .agents/workflows/secure-deploy.md</span>
+              <button class="copy-btn" data-target="code-workflow" id="copy-workflow">Copiar</button>
+            </div>
+            <pre class="code-block" id="code-workflow"><code><span class="c-comment">---</span>
+<span class="c-key">description</span><span class="c-colon">:</span> <span class="c-string">Deploy seguro: audita, testea y publica</span>
+<span class="c-comment">---</span>
+
+<span class="c-key"># Flujo Secure Deploy</span>
+
+<span class="c-comment">## Instrucciones al Agente</span>
+
+<span class="c-value">Este Workflow combina múltiples Skills para garantizar</span>
+<span class="c-value">que el código sea seguro antes de llegar a producción.</span>
+
+<span class="c-key">## Paso 1: Auditoría de Seguridad</span>
+<span class="c-value">Activa y ejecuta tu Skill `security-auditor` sobre</span>
+<span class="c-value">todos los archivos modificados en el último commit.</span>
+<span class="c-value">Si hay hallazgos CRITICAL, detén el proceso.</span>
+
+<span class="c-key">## Paso 2: Tests Automáticos</span>
+<span class="c-comment">// turbo</span>
+<span class="c-value">Ejecuta los tests del proyecto:</span>
+<span class="c-value">`npm run test -- --coverage`</span>
+<span class="c-value">Asegúrate de que la cobertura sea > 80%.</span>
+
+<span class="c-key">## Paso 3: Deploy</span>
+<span class="c-value">Solo si los pasos anteriores pasan sin errors:</span>
+<span class="c-value">`npm run build && npm run deploy:prod`</span>
+
+<span class="c-key">## Paso 4: Notificación</span>
+<span class="c-value">Llama a `notify_user` con un resumen del deploy.</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MULTI-AI ====== -->
+  <section class="section" id="multi-ai">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Caso de Uso Avanzado</span>
+        <h2>Skill Multi-AI Pipeline</h2>
+        <p>El patrón más poderoso: el agente adopta automáticamente el perfil cognitivo óptimo para cada fase del
+          proyecto, sin intervención manual.</p>
+      </div>
+
+      <!-- Perfiles Cognitivos -->
+      <div class="section-subheader reveal">
+        <h3>Perfiles Cognitivos Disponibles</h3>
+        <p>El agente selecciona el perfil más adecuado según el tipo de proyecto y la fase activa.</p>
+      </div>
+      <div class="profile-grid reveal">
+        <div class="profile-card">
+          <div class="profile-emoji">🏛️</div>
+          <div class="profile-name">Arquitecto de Software</div>
+          <div class="profile-desc">Diseña soluciones escalables. Prioriza patrones, desacoplamiento y claridad
+            estructural.</div>
+          <div class="profile-phase">Planificación</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-emoji">💻</div>
+          <div class="profile-name">Senior Developer</div>
+          <div class="profile-desc">Escribe código limpio, eficiente y bien documentado. Se adapta al lenguaje del
+            proyecto.</div>
+          <div class="profile-phase">Implementación</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-emoji">🔍</div>
+          <div class="profile-name">Auditor de Código</div>
+          <div class="profile-desc">Busca bugs, vulnerabilidades, code smells y problemas de rendimiento con mentalidad
+            destructiva.</div>
+          <div class="profile-phase">Verificación</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-emoji">🎨</div>
+          <div class="profile-name">UX/UI Designer</div>
+          <div class="profile-desc">Evalúa usabilidad, accesibilidad y estética cuando el proyecto tiene componente
+            visual.</div>
+          <div class="profile-phase">Visual</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-emoji">🛡️</div>
+          <div class="profile-name">Especialista en Seguridad</div>
+          <div class="profile-desc">Aplica checklist OWASP, detecta secretos expuestos, inyecciones y broken
+            authentication.</div>
+          <div class="profile-phase">Auth / APIs</div>
+        </div>
+      </div>
+
+      <!-- Pipeline Flow -->
+      <div class="section-subheader reveal" style="margin-top:64px">
+        <h3>Flujo Autónomo del Pipeline</h3>
+        <p>Solo dos pausas: después del plan y después de la verificación. El resto es completamente autónomo.</p>
+      </div>
+      <div class="pipeline-flow reveal">
+        <div class="pipeline-step">
+          <div class="ps-icon">🏛️</div>
+          <div class="ps-label">Planificación</div>
+          <div class="ps-model">Perfil: Arquitecto</div>
+          <div class="ps-desc">Analiza requisitos, estudia el codebase, genera el plan técnico.</div>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step highlight-step">
+          <div class="ps-icon">✅</div>
+          <div class="ps-label">Tu Aprobación</div>
+          <div class="ps-model">Única pausa #1</div>
+          <div class="ps-desc">Revisas el plan y das luz verde con un simple "Autorizado".</div>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="ps-icon">💻</div>
+          <div class="ps-label">Implementación</div>
+          <div class="ps-model">Perfil: Sr. Developer</div>
+          <div class="ps-desc">Escribe el código alineado al plan aprobado con rigor técnico.</div>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="ps-icon">🔍</div>
+          <div class="ps-label">Verificación</div>
+          <div class="ps-model">Perfil: Auditor QA</div>
+          <div class="ps-desc">Audita el código, corre tests y genera el walkthrough final.</div>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step highlight-step">
+          <div class="ps-icon">✅</div>
+          <div class="ps-label">Tu Aprobación</div>
+          <div class="ps-model">Única pausa #2</div>
+          <div class="ps-desc">Revisas el resultado final y apruebas el cierre del proyecto.</div>
+        </div>
+      </div>
+
+      <!-- Activación -->
+      <div class="activation-box reveal">
+        <div class="activation-title">Cómo activar la Skill Multi-AI en tu proyecto</div>
+        <div class="activation-options">
+          <div class="activation-option">
+            <span class="ao-num">1</span>
+            <div>
+              <strong>Comando Explícito via Workflow</strong>
+              <code class="ao-code">/multi-ai-pipeline crea un módulo de autenticación</code>
+            </div>
+          </div>
+          <div class="activation-option">
+            <span class="ao-num">2</span>
+            <div>
+              <strong>Petición Conversacional Directa</strong>
+              <code class="ao-code">Usa tu skill multi-ai para refactorizar este servicio</code>
+            </div>
+          </div>
+          <div class="activation-option">
+            <span class="ao-num">3</span>
+            <div>
+              <strong>Activación Orgánica por Complejidad</strong>
+              <code class="ao-code">El agente detecta que la tarea requiere este nivel de orquestación</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">✦</span> Antigravity <span class="logo-badge">Skills</span>
+      </div>
+      <p class="footer-text">Construido con Google Antigravity · Multi-AI Pipeline Skill</p>
+      <p class="footer-copy">© 2026 Guía Interactiva de Skill Agents</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
